@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url("utils.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+
+
+body {
+    line-height: 1;
+    font-family: "Roboto", serif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+.app-container {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+
+.input-grid {
+    width: 100%;
+    table-layout: fixed;
+    border: 1px solid;
+}
+
+.input-grid th {
+    background-color: #cccccc;
+}
+
+.input-grid th,
+.input-grid td {
+    padding: .25rem;
+    font-size: var(--text-sm);
+    border: 1px solid;
+}
+
+/* <div className="input-container">
+        {showLabel ?
+            <label className="input-label">
+                {label}
+            </label> : <></>}
+
+        <div className="input-field__wrapper">
+            <input type="text" name={name}
+                readOnly={readOnly}
+                placeholder={placeholder || ""}
+                onChange={onChange}
+            />
+        </div>
+    </div> */
+
+.input-container {}
+
+.input-label {
+    margin-bottom: .5rem;
+}
+
+
+.input-field__wrapper input {
+    border-radius: .25rem;
+    padding: .5rem;
+    border: none;
+    border-radius: .25rem;
+    box-shadow: 0 0 2px #8a8a8a;
+    width: 100%;
+    font-size: var(--text-sm);
+    outline-color: #7c7c7c
+}
+
+.autocomplete-options {
+    padding: .25rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 2px #8a8a8a;
+}
+
+.autocomplete-option__list .option {
+    padding: .5rem;
+}
+
+.autocomplete-option__list .option:hover {
+    background-color: #efefef;
+    transition: all 200ms;
+}

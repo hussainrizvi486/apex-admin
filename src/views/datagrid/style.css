@@ -1,0 +1,70 @@
+.datagrid-cell {
+    font-size: .875rem;
+    padding: .5rem;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th.datagrid-cell {
+    text-align: left;
+}
+
+
+.datagrid {
+    --border-color: #a8a8a8;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+
+/*  */
+
+.datagrid {
+    --cell-active-color: #0088ff;
+    --text-size: 1rem;
+    --row-hover-bg: #e0e0e0;
+    width: 100%;
+    border: 1px solid;
+    border-color: #808080;
+    border-collapse: collapse;
+}
+
+/* 
+.datagrid * {
+    border-color: #9e9e9e !important;
+}
+
+.datagrid-sm {
+    --text-size: .875rem;
+}
+
+.datagrid-cell {
+    font-size: var(--text-size);
+    text-align: left;
+}
+
+
+.datagrid-header .datagrid-cell {
+    border-top: 1px solid;
+    font-weight: 400;
+}
+
+
+.datagrid-cell {
+    padding: .75rem;
+    border-bottom: 1px solid;
+}
+
+
+.datagrid-body .datagrid-row:hover {
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.datagrid-row[data-row-selected="true"] {
+    background-color: #e1e1e1 !important;
+} */
