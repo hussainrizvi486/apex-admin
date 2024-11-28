@@ -13,7 +13,7 @@
 
 body {
     line-height: 1;
-    font-family: "Roboto", serif;
+    font-family: "Inter", serif;
 }
 
 ol,
@@ -98,4 +98,53 @@ table {
 .autocomplete-option__list .option:hover {
     background-color: #efefef;
     transition: all 200ms;
+}
+
+
+.form-section--wrapper {
+    padding-block: 2rem;
+}
+
+.form-field__wrapper {
+    margin-bottom: .75rem;
+}
+
+.form-section__heading {
+    margin-bottom: 1rem;
+
+}
+
+@media (min-width: 768px) {
+
+
+    .form-section {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .form-section .form-columns {
+        flex-basis: 100%;
+    }
+
+}
+
+/*  */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-header--wrapper {
+    border-bottom: 1px solid lightgrey;
+}
+
+.app-header__brand {
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.app-header__brand span {
+    color: #e50000;
 }

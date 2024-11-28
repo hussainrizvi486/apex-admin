@@ -3,7 +3,10 @@ import "./styles/main.css";
 import { GridColDef } from "./views/datagrid/types";
 import { GridInput } from "./components/inputs/GridInput";
 import { AutoComplete } from "./components/inputs/AutoComplete";
-
+import { Input } from "./components/ui/input";
+import { Routes, Route } from "react-router";
+import { AppForm } from "./views/form";
+import { AppHeader } from "./layout/header";
 
 
 function App() {
@@ -156,16 +159,19 @@ function App() {
 
 
   return (
-    <div className="app-container">
-      <br />
-      <br />
-      <br />
-      <br />
+    <>
+      <AppHeader />
+      <div className="app-container">
 
-      <AutoComplete />
-      {/* <GridInput /> */}
-      {/* <DataGrid columns={columns} data={data} selectableRows={true} enableSerial={true} /> */}
-    </div>
+        <Routes >
+          <Route path="app/form" element={<AppForm />} />
+        </Routes>
+
+        {/* <AutoComplete /> */}
+        {/* <GridInput /> */}
+        {/* <DataGrid columns={columns} data={data} selectableRows={true} enableSerial={true} /> */}
+      </div>
+    </>
   )
 }
 
