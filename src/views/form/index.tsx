@@ -1,6 +1,7 @@
-import { renderForm } from "../../features/forms"
+import { renderForm, FormFieldDF } from "../../features/forms"
 const formFields: Array<FormFieldDF> = [
-    // Section 1: Personal Information
+
+
     {
         label: "Product Information",
         name: "section1",
@@ -15,37 +16,45 @@ const formFields: Array<FormFieldDF> = [
     {
         label: "Model Number",
         type: "text",
-        name: "product_name",
+        name: "model_number",
     },
     {
         label: "Brand",
-        type: "text",
-        name: "product_name",
+        type: "autocomplete",
+        name: "brand",
+        options: [
+            { label: "Razer", value: "Razer" },
+            { label: "Logitech G ", value: "Logitech G " },
+            { label: "SteelSeries", value: "SteelSeries" },
+            { label: "Corsair", value: "Corsair" },
+            { label: "HyperX", value: "HyperX" },
+            { label: "ASUS ROG (Republic of Gamers)", value: "ASUS ROG (Republic of Gamers)" },
+            { label: "Alienware", value: "Alienware" }
+        ]
     },
 
     {
         label: "Color",
         type: "text",
-        name: "product_name",
+        name: "color",
     },
     {
         label: "Maintain Stock",
-        name: "category",
-        type: "text",
+        name: "maintain_stock",
+        type: "checkbox",
     },
     {
-        label: "Current Stock",
-        name: "category",
-        type: "text",
+        label: "Posting Date",
+        name: "posting_date",
+        type: "date",
     },
     {
         label: "Disabled",
-        name: "category",
-        type: "text",
+        name: "disabled",
+        type: "checkbox",
     },
-
     {
-        // 
+        label: "",
         type: "column_break",
         name: "column_break",
     },
@@ -72,8 +81,8 @@ const formFields: Array<FormFieldDF> = [
 
     {
         label: "Published",
-        name: "category",
-        type: "text",
+        name: "published",
+        type: "checkbox",
     },
 
 

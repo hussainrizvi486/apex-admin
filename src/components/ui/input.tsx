@@ -1,5 +1,3 @@
-import { Volume } from "lucide-react";
-
 interface InputProps {
     name: string,
     label?: string
@@ -12,26 +10,23 @@ interface InputProps {
     showLabel?: boolean,
 }
 
-// export const INPUT_VALIDATORS = {
-//     "number": /\d+/g,
-//     "float": /^[+-]?\d+(\.\d+)?$/,
-//     "currency": /^[+-]?\d+(\.\d+)?$/,
+
+function getFloat() { }
+// function getFloat(value: null | string | number | GLfloat, precision = 2): GLfloat {
+//     if (!value) return 0;
+
+//     let parsedValue: number;
+
+//     if (typeof value !== "number") {
+//         parsedValue = parseFloat(value as string);
+//         if (isNaN(parsedValue)) return 0;
+//     } else {
+//         parsedValue = value;
+//     }
+
+//     const factor = Math.pow(10, precision);
+//     return Math.round(parsedValue * factor) / factor;
 // }
-function getFloat(value: null | string | number | GLfloat, precision = 2): GLfloat {
-    if (!value) return 0;
-
-    let parsedValue: number;
-
-    if (typeof value !== "number") {
-        parsedValue = parseFloat(value as string);
-        if (isNaN(parsedValue)) return 0;
-    } else {
-        parsedValue = value;
-    }
-
-    const factor = Math.pow(10, precision);
-    return Math.round(parsedValue * factor) / factor;
-}
 
 export const Input = ({ label, placeholder, name, onChange, showLabel = true, readOnly = false, type = "text", disabled = false, precision = 2 }: InputProps) => {
 
@@ -47,13 +42,16 @@ export const Input = ({ label, placeholder, name, onChange, showLabel = true, re
                 placeholder={placeholder || ""}
                 disabled={disabled}
                 onBlur={(event) => {
-                    if (["number", "float", "currency"].includes(type)) {
-                        const { value } = event.target;
-                        event.target.value = getFloat(value, precision);
-                    }
+                    // if (["number", "float", "currency"].includes(type)) {
+                    //     const { value } = event.target;
+                    //     event.target.value = getFloat(value, precision);
+                    // }
                     if (onChange) onChange(event);
                 }}
             />
         </div>
     </div>
 }
+
+
+

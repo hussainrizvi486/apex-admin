@@ -1,20 +1,29 @@
 import { Input } from "../../components/ui/input";
+import { Checkbox } from "../../components/ui/checkbox";
+import { AutoComplete } from "../../components/inputs/AutoComplete";
+import { DatePicker } from "../../components/ui/datepicker"
+
+
 
 
 interface FieldDF {
-    label?: string;
+    label: string;
     type?: "text" | "number" | "float" | "currency";
     required?: boolean;
     name: string;
+    options?: any
 }
 
-interface FormFieldDF extends FieldDF {
-    type: "text" | "number" | "float" | "currency" | "column_break" | "section";
+export interface FormFieldDF extends FieldDF {
+    type: "text" | "number" | "float" | "currency" | "column_break" | "section" | "autocomplete" | "checkbox" | "date";
 }
 
 
 export function renderForm(fields: Array<FormFieldDF>) {
     function renderField(df: FormFieldDF) {
+        if (df.type == "autocomplete") return <AutoComplete label={df.label} options={df.options} />
+        if (df.type == "checkbox") return <Checkbox label={df.label} name={df.name} />
+        if (df.type == "date") return <DatePicker />
         return <Input label={df.label} name={df.name} />
     }
 
